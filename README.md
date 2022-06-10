@@ -17,30 +17,32 @@ O circuito:
 O código:
 
 ```cpp
+int bot=11;
+int led=12;
+
 void setup()
 {
-  // Define a porta 13 como entrada pullup
-  pinMode(13, INPUT_PULLUP);
-  // Define o pino 12 como saída para o LED
-  pinMode(12, OUTPUT);
+  // Define a porta do botão como entrada pullup
+  pinMode(bot, INPUT_PULLUP);
+  // Define o pino do LED como saída
+  pinMode(led, OUTPUT);
 }
 void loop()
 {
   // caso o botão seja pressionado
-  if (!digitalRead(13))
+  if (!digitalRead(bot))
   {
     // espera um pouquinho para evitar leitura errada
     delay(50);
     // verifica novamente se o botão continua pressionado
-    if (if (!digitalRead(13)))
+    if (!digitalRead(bot))
     {
-      // aprisiona o código enquanto o botão estiver pressionado
-      while (!digitalRead(13))
+      while (!digitalRead(11))
       {
       }
+      // inverte o pino 12// aprisiona o código enquanto o botão estiver pressionado
+      digitalWrite(12, !digitalRead(12));
     }
-    // inverte o pino 12
-    digitalWrite(12, !digitalRead(12));
   }
 }
 ```
