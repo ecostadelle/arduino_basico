@@ -1,22 +1,3 @@
-# Arduino Básico
-Repositório de experimentos para o curso de Arduino Básico
-
-## Exemplo Botão
-
-Nesse exemplo vamos utilizar:
-
-1. um botão (chave táctil);
-2. um LED;
-3. um resistor de $330 \Omega$
-4. fios de conexão (jumpers)
-
-O circuito:
-
-![Exemplo com botão](ex_botao\ex_botao.jpg)
-
-O código:
-
-```cpp
 void setup()
 {
   // Define a porta 13 como entrada pullup
@@ -43,4 +24,3 @@ void loop()
     digitalWrite(12, !digitalRead(12));
   }
 }
-```
