@@ -1,6 +1,38 @@
 # Arduino Básico
 Repositório de experimentos para o curso de Arduino Básico
 
+## Exemplo Potenciômetro
+
+Nesse exemplo vamos utilizar:
+
+1. um potenciômetro (resistor variável);
+2. quatro LEDs;
+3. quatro resistores de $330 \Omega$
+4. fios de conexão (jumpers)
+
+O circuito:
+
+![Exemplo com potenciômetro](ex_potenciometro\ex_potenciometro.png)
+
+O código:
+
+```cpp
+void setup() {
+  for(int contador = 4; contador <= 7; contador++){
+    pinMode(contador, OUTPUT);
+  }
+}
+void loop() {
+  int tempo = 0;
+  for(int contador = 4; contador <= 7; contador++){
+    tempo = analogRead(A0);
+    digitalWrite(contador, HIGH);
+    delay(tempo);
+    digitalWrite(contador, LOW);
+  }
+}
+```
+
 ## Exemplo Botão
 
 Nesse exemplo vamos utilizar:
